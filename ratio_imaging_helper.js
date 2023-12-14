@@ -496,7 +496,7 @@ macro "heatmap_generation_and_save [h]" {
     image_division_ratio_plus(image_1, image_2); //This uses the ratio plus plugin
 
     result_image = locate_image_by_regex("^Ratio.*"); //Image's name starts with "Ratio"
-    apply_LUT(result_image, "mpl-inferno"); //Apply the mpl-inferno style to the heatmap with some contrast adjustment
+    apply_LUT(result_image, "16 colors"); //Apply the mpl-inferno style to the heatmap with some contrast adjustment
     rename_image(result_image, "Heatmap of " + stack_title);
 
     save_directory = judge_make_directory("Fiji_output");
